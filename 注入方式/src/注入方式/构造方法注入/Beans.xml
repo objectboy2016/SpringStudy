@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="foo" class="注入方式.构造方法注入.Foo">
+        <constructor-arg ref="bar"/>
+        <constructor-arg ref="baz"/>
+    </bean> 
+    <bean id="bar" class="注入方式.构造方法注入.Bar" >
+        <property name="name" value="objectboy"></property>
+        <property name="age" value="21"></property>
+    </bean>
+    
+    <bean id="baz" class="注入方式.构造方法注入.Baz"  >
+        <constructor-arg name="name" value="paul.huang"></constructor-arg>
+        <constructor-arg name="age" value="21"></constructor-arg>
+    </bean>
+</beans>
